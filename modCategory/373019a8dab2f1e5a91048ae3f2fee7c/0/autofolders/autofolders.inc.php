@@ -80,6 +80,7 @@ if (!function_exists('getFormattedDate') ) {
 		// $dt = datetime 
 		// Part should be y, m or d
 		// format should be the format ID from the config dropdown
+		global $modx;
 		
 		switch ($part) {
 		
@@ -112,10 +113,10 @@ if (!function_exists('getFormattedDate') ) {
 						return strftime("%m", $dt);
 					break;	
 					case '3':
-						return strftime("%B", $dt);
+						return $modx->lexicon(strtolower(strftime("%B", $dt)));
 					break;
 					case '4':
-						return strftime("%b", $dt);
+						return substr($modx->lexicon(strtolower(strftime("%B", $dt))), 0, 3);
 					break;
 					default:
 						return false;
@@ -150,6 +151,9 @@ if (!function_exists('getFormattedDate') ) {
 	}
 }
 
+/* Load modX lexicon for international month names */
+$modx->getService('lexicon','modLexicon');
+$modx->lexicon->load('default');
 
 // What are the formats specified?
 $aliases['y'] = getFormattedDate($dt,  'y', $alias_year_format);
