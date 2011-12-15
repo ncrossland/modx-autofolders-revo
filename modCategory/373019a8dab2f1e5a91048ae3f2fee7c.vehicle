@@ -1,0 +1,51 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => true,
+  'related_object_attributes' => 
+  array (
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'TemplateVars' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Templates' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'templatename',
+    ),
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'autofolders',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"autofolders-0.1-beta1\\/modCategory\\/373019a8dab2f1e5a91048ae3f2fee7c\\/0\\/","target":"return \\"\\".MODX_CORE_PATH.\\"components\\/\\";","name":"autofolders"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '9de9417adf0d6cc863a807022579437c',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '373019a8dab2f1e5a91048ae3f2fee7c',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"Autofolders"}',
+);

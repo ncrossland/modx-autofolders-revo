@@ -1,0 +1,54 @@
+<?php return array (
+  'preserve_keys' => false,
+  'update_object' => true,
+  'unique_key' => 'name',
+  'related_objects' => 
+  array (
+    'PluginEvents' => 
+    array (
+      'da6f0f461afd85a1c0ec880e4aad091d' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":1,"event":"OnDocFormSave","priority":0,"propertyset":0}',
+        'guid' => '1288f5bc086287f392ab6236960f0c05',
+        'native_key' => 
+        array (
+          0 => 1,
+          1 => 'OnDocFormSave',
+        ),
+        'signature' => '834ca0cec8855c2e39c25d6bc1998aa5',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => false,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'autofolders',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'c2b77688857da841fa3fb19842143896',
+  'package' => 'modx',
+  'class' => 'modPlugin',
+  'signature' => 'ee289a9e4d5f437f7adf0a9468dd5391',
+  'native_key' => 1,
+  'object' => '{"id":1,"name":"autofolders","description":"Automatically put news in the correct folders","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/\\/$modx->getService(\'fire\', \'modFire\', $modx->getOption(\'core_path\').\'components\\/modfire\\/\');\\n\\n$asset_path = $modx->getOption(\'core_path\') . \'components\\/autofolders\\/autofolders.inc.php\';\\n\\ninclude $asset_path;","locked":0,"properties":"a:11:{s:16:\\"folder_structure\\";a:6:{s:4:\\"name\\";s:16:\\"folder_structure\\";s:4:\\"desc\\";s:49:\\"What structure should newly created folders take?\\";s:4:\\"type\\";s:4:\\"list\\";s:7:\\"options\\";a:3:{i:0;a:3:{s:4:\\"name\\";s:1:\\"y\\";s:5:\\"value\\";s:1:\\"y\\";s:4:\\"menu\\";N;}i:1;a:3:{s:4:\\"name\\";s:3:\\"y\\/m\\";s:5:\\"value\\";s:3:\\"y\\/m\\";s:4:\\"menu\\";N;}i:2;a:3:{s:4:\\"name\\";s:5:\\"y\\/m\\/d\\";s:5:\\"value\\";s:5:\\"y\\/m\\/d\\";s:4:\\"menu\\";N;}}s:5:\\"value\\";s:3:\\"y\\/m\\";s:7:\\"lexicon\\";N;}s:10:\\"date_field\\";a:6:{s:4:\\"name\\";s:10:\\"date_field\\";s:4:\\"desc\\";s:244:\\"Which field to base sorting on? Can be one of ModX\'s default date fields (pub_date, unpub_date, createdon, editedon, deletedon, publishedon) or a TV name. If using a TV, it should be set to input and output type \\"Date\\" and format to be \\"%F %T\\" \\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:11:\\"publishedon\\";s:7:\\"lexicon\\";N;}s:6:\\"parent\\";a:6:{s:4:\\"name\\";s:6:\\"parent\\";s:4:\\"desc\\";s:73:\\"Parent document - where the date based folder structure should be created\\";s:4:\\"type\\";s:11:\\"numberfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";i:6;s:7:\\"lexicon\\";N;}s:17:\\"alias_year_format\\";a:6:{s:4:\\"name\\";s:17:\\"alias_year_format\\";s:4:\\"desc\\";s:29:\\"Format for years in the alias\\";s:4:\\"type\\";s:4:\\"list\\";s:7:\\"options\\";a:2:{i:0;a:3:{s:4:\\"name\\";s:7:\\"4 digit\\";s:5:\\"value\\";s:1:\\"4\\";s:4:\\"menu\\";N;}i:1;a:3:{s:4:\\"name\\";s:7:\\"2 digit\\";s:5:\\"value\\";s:1:\\"2\\";s:4:\\"menu\\";N;}}s:5:\\"value\\";s:1:\\"4\\";s:7:\\"lexicon\\";N;}s:17:\\"title_year_format\\";a:6:{s:4:\\"name\\";s:17:\\"title_year_format\\";s:4:\\"desc\\";s:37:\\"Format for the year in created titles\\";s:4:\\"type\\";s:4:\\"list\\";s:7:\\"options\\";a:2:{i:0;a:3:{s:4:\\"name\\";s:7:\\"4 digit\\";s:5:\\"value\\";s:1:\\"4\\";s:4:\\"menu\\";N;}i:1;a:3:{s:4:\\"name\\";s:7:\\"2 digit\\";s:5:\\"value\\";s:1:\\"2\\";s:4:\\"menu\\";N;}}s:5:\\"value\\";s:1:\\"4\\";s:7:\\"lexicon\\";N;}s:8:\\"template\\";a:6:{s:4:\\"name\\";s:8:\\"template\\";s:4:\\"desc\\";s:24:\\"Template ID(s) to target\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:1:\\"3\\";s:7:\\"lexicon\\";N;}s:18:\\"title_month_format\\";a:6:{s:4:\\"name\\";s:18:\\"title_month_format\\";s:4:\\"desc\\";s:35:\\"Format for months created in titles\\";s:4:\\"type\\";s:4:\\"list\\";s:7:\\"options\\";a:4:{i:0;a:3:{s:4:\\"name\\";s:21:\\"Number (no leading 0)\\";s:5:\\"value\\";s:1:\\"1\\";s:4:\\"menu\\";N;}i:1;a:3:{s:4:\\"name\\";s:18:\\"Number (leading 0)\\";s:5:\\"value\\";s:1:\\"2\\";s:4:\\"menu\\";N;}i:2;a:3:{s:4:\\"name\\";s:16:\\"Text (Full name)\\";s:5:\\"value\\";s:1:\\"3\\";s:4:\\"menu\\";N;}i:3;a:3:{s:4:\\"name\\";s:17:\\"Text (Short name)\\";s:5:\\"value\\";s:1:\\"4\\";s:4:\\"menu\\";N;}}s:5:\\"value\\";s:1:\\"3\\";s:7:\\"lexicon\\";N;}s:17:\\"new_page_template\\";a:6:{s:4:\\"name\\";s:17:\\"new_page_template\\";s:4:\\"desc\\";s:43:\\"Template (ID) for newly created index pages\\";s:4:\\"type\\";s:11:\\"numberfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:1:\\"2\\";s:7:\\"lexicon\\";N;}s:18:\\"alias_month_format\\";a:6:{s:4:\\"name\\";s:18:\\"alias_month_format\\";s:4:\\"desc\\";s:32:\\"Format of the month in the alias\\";s:4:\\"type\\";s:4:\\"list\\";s:7:\\"options\\";a:4:{i:0;a:3:{s:4:\\"name\\";s:21:\\"Number (no leading 0)\\";s:5:\\"value\\";s:1:\\"1\\";s:4:\\"menu\\";N;}i:1;a:3:{s:4:\\"name\\";s:18:\\"Number (leading 0)\\";s:5:\\"value\\";s:1:\\"2\\";s:4:\\"menu\\";N;}i:2;a:3:{s:4:\\"name\\";s:16:\\"Text (full name)\\";s:5:\\"value\\";s:1:\\"3\\";s:4:\\"menu\\";N;}i:3;a:3:{s:4:\\"name\\";s:17:\\"Text (short name)\\";s:5:\\"value\\";s:1:\\"4\\";s:4:\\"menu\\";N;}}s:5:\\"value\\";s:1:\\"1\\";s:7:\\"lexicon\\";N;}s:16:\\"alias_day_format\\";a:6:{s:4:\\"name\\";s:16:\\"alias_day_format\\";s:4:\\"desc\\";s:40:\\"Format of the day in the created aliases\\";s:4:\\"type\\";s:4:\\"list\\";s:7:\\"options\\";a:2:{i:0;a:3:{s:4:\\"name\\";s:21:\\"Number (no leading 0)\\";s:5:\\"value\\";s:1:\\"1\\";s:4:\\"menu\\";N;}i:1;a:3:{s:4:\\"name\\";s:18:\\"Number (leading 0)\\";s:5:\\"value\\";s:1:\\"2\\";s:4:\\"menu\\";N;}}s:5:\\"value\\";s:1:\\"1\\";s:7:\\"lexicon\\";N;}s:16:\\"title_day_format\\";a:6:{s:4:\\"name\\";s:16:\\"title_day_format\\";s:4:\\"desc\\";s:39:\\"Format for days in newly created titles\\";s:4:\\"type\\";s:4:\\"list\\";s:7:\\"options\\";a:2:{i:0;a:3:{s:4:\\"name\\";s:21:\\"Number (no leading 0)\\";s:5:\\"value\\";s:1:\\"1\\";s:4:\\"menu\\";N;}i:1;a:3:{s:4:\\"name\\";s:18:\\"Number (leading 0)\\";s:5:\\"value\\";s:1:\\"2\\";s:4:\\"menu\\";N;}}s:5:\\"value\\";s:1:\\"2\\";s:7:\\"lexicon\\";N;}}","disabled":0,"moduleguid":""}',
+);
