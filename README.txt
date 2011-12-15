@@ -19,3 +19,10 @@ Installation Instructions
 Please note that implementing this plugin doesn't do any permissions checks, so the plugin may move documents into areas of the site, and create folders which the ModX user permissions wouldn't allow you to create manually. 
 All other container-folder properties are chosen by duplicating their parent - for example template, access permissions. 
 If you want to autofolder more than one area of the site, e.g. a news section AND a blog section, you will need to DUPLICATE the plugin (giving it a suitable name such as "autofolders - blogs") and set the different template requirements in that plugin's properties.
+
+
+Version: 1.2dev
+
+Changelog: 
+1.2
+* Use Modx Lexicon for international month names 
