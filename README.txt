@@ -26,3 +26,4 @@ Version: 1.2dev
 Changelog: 
 1.2
 * Use Modx Lexicon for international month names 
+* Fixed usage of multiple plugin instances
