@@ -44,6 +44,15 @@ if (!in_array($r->get('template'), $tpls)) {
 	return false;
 }
 
+// Explode the folder format
+$folders = explode('/', $folder_structure);
+
+// avoid interference of multiple instances of the plugin
+if ($parent != $_REQUEST['parent']) {
+  $allParents = $modx->getParentIds($_REQUEST['parent'], count($folders) + 1, array('context' => 'web'));
+  $parLen = count($allParents);
+	if (!in_array($parent, $allParents)) return false;
+}
 
 // Prevent errors in E_STRICT
 date_default_timezone_set( @date_default_timezone_get() );
@@ -164,8 +173,6 @@ $titles['m'] = getFormattedDate($dt,  'm', $title_month_format);
 $titles['d'] = getFormattedDate($dt,  'd', $title_day_format);
 
 
-// Explode the folder format
-$folders = explode('/', $folder_structure);
 
 // Where do we start looking for folders?
 $last_parent = intval($parent);
