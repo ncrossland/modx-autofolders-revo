@@ -233,6 +233,7 @@ foreach ($folders as $i=>$f) {
 			
 		$newdoc->set('isfolder', '1');	
 		$newdoc->set('published', '1');
+		$newdoc->set('searchable', '1');
 		$newdoc->set('template', $new_page_template);
 		$newdoc->set('longtitle', $new_title);	
 		$newdoc->set('menutitle', $titles[$f]);	
